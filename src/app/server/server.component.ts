@@ -10,6 +10,7 @@ export class ServerComponent {
   serverId: number = 10;
   serverStatus:  string = 'offline';
   allowNewServer = false;
+  serverCreationStatus = 'No server wa created!';
 
   constructor() {
     setTimeout(()=>{
@@ -17,7 +18,7 @@ export class ServerComponent {
     },3000);
   }
 
-  getServerStatus() {
-    return this.serverStatus;
+  OnCreateServer() {
+    this.serverCreationStatus = "Server was created!";
   }
 }
