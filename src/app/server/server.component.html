@@ -1,4 +1,6 @@
-<p [ngStyle]="{backgroundColor : getColor()}">Server with server ID {{serverId}} is {{serverStatus}}</p>
+<p
+  [ngStyle]="{backgroundColor : getColor()}"
+  [ngClass]="{online : serverStatus === 'online'}">Server with server ID {{serverId}} is {{serverStatus}}</p>
 <label>Server Name</label>
 <!-- One Way Binding -->
 <input
