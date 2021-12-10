@@ -1,3 +1,4 @@
+<p [ngStyle]="{backgroundColor : getColor()}">Server with server ID {{serverId}} is {{serverStatus}}</p>
 <label>Server Name</label>
 <!-- One Way Binding -->
 <input
@@ -9,7 +10,7 @@
   [(ngModel)]="serverName">
 <p>{{serverName}}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="OnCreateServer()">Add Server</button>
-<p *ngIf="serverCreated; else noServer">{{serverCreationStatus}}</p>
+<p *ngIf="serverCreated; else noServer">{{serverCreationStatus}}  ans status is {{serverStatus}}</p>
 <ng-template #noServer>
   <p>No server created!</p>
 </ng-template>
