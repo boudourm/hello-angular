@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="toggleDetailsDisplay()">Display Details</button>
+<p *ngIf="displayedDetails">The content is displayed.</p>
+<h4>Button click logs</h4>
+<p *ngFor="let log of buttonClicks; let i=index"
+   [ngStyle]="{backgroundColor: getColor(i)}"
+   [ngClass]="{aboveFifth: i>=5}">{{i}} : {{log}}</p>
