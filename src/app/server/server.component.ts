@@ -13,6 +13,7 @@ export class ServerComponent {
   serverCreationStatus = 'No server wa created!';
   serverName = 'TestServer';
   serverCreated = false;
+  servers = ['TestServer', 'TestServer2'];
 
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -24,6 +25,7 @@ export class ServerComponent {
 
   OnCreateServer() {
     this.serverCreated=true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = "Server was created! Name is "+this.serverName;
   }
 

@@ -16,3 +16,6 @@
 <ng-template #noServer>
   <p>No server created!</p>
 </ng-template>
+<h4>List of existing servers : </h4>
+<p *ngFor="let server of servers">Server : {{server}}</p>
+
