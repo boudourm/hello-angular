@@ -20,9 +20,5 @@ export class DetailsComponent implements OnInit {
       ', displayedDetails : '+!this.displayedDetails+'=>'+this.displayedDetails);
   }
 
-  getColor(index: number) {
-    if(index>=5) return 'blue';
-    return 'white';
-  }
 
 }

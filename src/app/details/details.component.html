@@ -2,5 +2,5 @@
 <p *ngIf="displayedDetails">The content is displayed.</p>
 <h4>Button click logs</h4>
 <p *ngFor="let log of buttonClicks; let i=index"
-   [ngStyle]="{backgroundColor: getColor(i)}"
+   [ngStyle]="{backgroundColor: i>=5 ? 'blue' : 'transparent'}"
    [ngClass]="{aboveFifth: i>=5}">{{i}} : {{log}}</p>
