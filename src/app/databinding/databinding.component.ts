@@ -8,24 +8,6 @@ import {Server} from "./server.model";
 })
 export class DatabindingComponent implements OnInit {
   serverElements: Server[] = [];
-  newServerName = '';
-  newServerContent = '';
-
-  onAddServer() {
-    this.serverElements.push({
-      type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
-  }
-
-  onAddBlueprint() {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
-  }
 
   constructor() {
     //This is intentional

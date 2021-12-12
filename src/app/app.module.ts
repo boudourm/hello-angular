@@ -5,12 +5,16 @@ import { AppComponent } from './app.component';
 import {ServerComponent} from "./server/server.component";
 import {FormsModule} from "@angular/forms";
 import { DatabindingComponent } from './databinding/databinding.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
