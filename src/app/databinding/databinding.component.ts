@@ -9,6 +9,10 @@ import {Server} from "./server.model";
 export class DatabindingComponent implements OnInit {
   serverElements: Server[] = [];
 
+  onAddServer(server: Server) {
+    this.serverElements.push(server);
+  }
+
   constructor() {
     //This is intentional
   }

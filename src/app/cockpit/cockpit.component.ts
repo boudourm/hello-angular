@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Server} from "../databinding/server.model";
 
 
 @Component({
@@ -7,15 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
+  @Output() serverCreated = new EventEmitter<Server>();
   newServerName = '';
   newServerContent = '';
 
   onAddServer() {
-   // this.serverElements.push(new Server('server',this.newServerName,this.newServerContent));
+   this.serverCreated.emit(new Server('server',this.newServerName,this.newServerContent));
   }
 
   onAddBlueprint() {
-   // this.serverElements.push(new Server('blueprint',this.newServerName,this.newServerContent));
+    this.serverCreated.emit(new Server('blueprint',this.newServerName,this.newServerContent));
   }
 
   constructor() {
