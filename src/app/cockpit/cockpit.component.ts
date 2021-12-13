@@ -9,15 +9,14 @@ import {Server} from "../databinding/server.model";
 })
 export class CockpitComponent implements OnInit {
   @Output('srvCreated') serverCreated = new EventEmitter<Server>();
-  newServerName = '';
   newServerContent = '';
 
-  onAddServer() {
-   this.serverCreated.emit(new Server('server',this.newServerName,this.newServerContent));
+  onAddServer(name: HTMLInputElement) {
+   this.serverCreated.emit(new Server('server',name.value,this.newServerContent));
   }
 
-  onAddBlueprint() {
-    this.serverCreated.emit(new Server('blueprint',this.newServerName,this.newServerContent));
+  onAddBlueprint(name: HTMLInputElement) {
+    this.serverCreated.emit(new Server('blueprint',name.value,this.newServerContent));
   }
 
   constructor() {
