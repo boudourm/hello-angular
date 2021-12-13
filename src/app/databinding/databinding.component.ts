@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Server} from "./server.model";
 
 @Component({
   selector: 'app-databinding',
   templateUrl: './databinding.component.html',
-  styleUrls: ['./databinding.component.css']
+  styleUrls: ['./databinding.component.css'],
+  encapsulation: ViewEncapsulation.Emulated // None, Shadowdom
 })
 export class DatabindingComponent implements OnInit {
   serverElements: Server[] = [];

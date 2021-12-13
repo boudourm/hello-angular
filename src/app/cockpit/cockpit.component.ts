@@ -8,7 +8,7 @@ import {Server} from "../databinding/server.model";
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
-  @Output() serverCreated = new EventEmitter<Server>();
+  @Output('srvCreated') serverCreated = new EventEmitter<Server>();
   newServerName = '';
   newServerContent = '';
 
